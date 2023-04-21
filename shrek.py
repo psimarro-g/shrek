@@ -3,7 +3,7 @@ import pyautogui
 import sys
 
 def SendScript(filename: str):
-	time.sleep(4) # este numero es el tiempo en segundos que tienes para hacer click en el chat que quieras petar, si eres lento de cojones pon mas tiempo
+	time.sleep(4) # este numero es el tiempo en segundos que tienes para hacer click con el cursor donde quieras escribir el guion
 	with open(filename) as f:
 		lines = f.readlines()
 	n = 0
@@ -22,8 +22,8 @@ def SendScript(filename: str):
 			re = input('continue y/n: ')
 			if re == 'y':
 				n = 0
-				time.sleep(4)#este numero cambialo tambien si quieres mas tiempo 
+				time.sleep(4)#este numero cambialo tambien si quieres mas tiempo para hacer click
 			else:
 				sys.exit()
 
-SendScript("script.txt") # aqui puedes cambiar el texto para spamear, pero tiene que estar guardado en la misma carpeta que este codigo.
+SendScript("script.txt") # aqui puedes cambiar el texto a usar, pero tiene que estar guardado en la misma carpeta que este codigo.
